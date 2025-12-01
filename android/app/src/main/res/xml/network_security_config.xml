@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Allow HTTPS traffic to required API domains -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">pokeapi.co</domain>
+        <domain includeSubdomains="true">api.artic.edu</domain>
+        <domain includeSubdomains="true">www.artic.edu</domain>
+        <domain includeSubdomains="true">raw.githubusercontent.com</domain>
+    </domain-config>
+</network-security-config>
