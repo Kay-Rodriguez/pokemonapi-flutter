@@ -41,7 +41,13 @@ flutter run -d <device-id>
 
 ## ¿Qué hace la app?
 - Pestaña "Pokémon": puedes buscar por nombre (p.ej. `ditto`) o cargar una lista de Pokémon; tocar un Pokémon muestra la pantalla de detalles con imagen oficial, tipos, habilidades y estadísticas.
+<img width="908" height="857" alt="image" src="https://github.com/user-attachments/assets/bcc2403c-41fe-4677-8162-df98bbc8a59f" 
+<img width="927" height="636" alt="image" src="https://github.com/user-attachments/assets/fe151137-d998-4307-a9c3-3b40fcf99e29" />
+
 - Pestaña "Art Institute": puedes cargar una cuadrícula de obras; tocar una obra muestra su imagen grande y metadatos.
+<img width="702" height="1600" alt="image" src="https://github.com/user-attachments/assets/6f87af07-9634-4e37-b03e-73291fec3d73" />
+<img width="702" height="1600" alt="image" src="https://github.com/user-attachments/assets/ba6197a9-4356-4fb0-98a6-725e4b484bc3" />
+
 
 ## Generar APK
 1. Asegúrate de tener `Android SDK Command-line Tools` instalado y un Java JDK disponible.
@@ -52,50 +58,3 @@ flutter build apk --release
 ```
 
 El APK generado estará en `build/app/outputs/flutter-apk/app-release.apk`.
-
-Si recibes errores relacionados con el Android toolchain, abre Android Studio → SDK Manager → SDK Tools → marca "Android SDK Command-line Tools" e instálalo.
-
-## Subir el proyecto a GitHub
-1. Crea un repositorio vacío en GitHub.
-2. Desde la raíz del proyecto ejecuta:
-
-```powershell
-git init
-git add .
-git commit -m "Initial commit - Pokémon & Art Institute app"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<repo-name>.git
-git push -u origin main
-```
-
-Reemplaza `<your-username>` y `<repo-name>` por tus datos.
-
-## Capturas y entrega
-- Toma capturas de pantalla de la app en ejecución y súbelas a la entrega en el aula virtual junto con el enlace a tu repositorio.
-
-## Errores comunes y soluciones
-- "No pubspec.yaml file found": asegúrate de ejecutar comandos desde la carpeta que contiene `pubspec.yaml`.
-- CMake generator mismatch (Visual Studio versiones diferentes): elimina `windows/CMakeCache.txt` y la carpeta `windows/CMakeFiles`, luego ejecuta `flutter clean` y `flutter run -d windows`.
-
-Ejemplo (PowerShell):
-
-```powershell
-Remove-Item .\windows\CMakeCache.txt -Force -ErrorAction SilentlyContinue
-Remove-Item .\windows\CMakeFiles -Recurse -Force -ErrorAction SilentlyContinue
-flutter clean
-flutter run -d windows
-```
-
-## Siguientes pasos (opcional)
-- Añadir tests unitarios / widget tests.
-- Subir releases a GitHub Releases o a Google Play (requiere cuenta de desarrollador).
-
-Si quieres que yo:
-- ejecute `flutter build apk` aquí (solo si el entorno tiene Android SDK y JDK), o
-- te guíe paso a paso mientras ejecutas los comandos en tu máquina para arreglar cualquier error,
-
-dime cuál opción prefieres y continúo.
-
----
-_Archivo generado/actualizado por asistencia automatizada para mejorar la entrega y facilitar la compilación y subida del proyecto._
-
